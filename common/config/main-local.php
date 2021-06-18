@@ -20,5 +20,6 @@ return [
             'port' => '587',
             'encryption' => 'tls',
         ],
+		],
     ],
 ];
