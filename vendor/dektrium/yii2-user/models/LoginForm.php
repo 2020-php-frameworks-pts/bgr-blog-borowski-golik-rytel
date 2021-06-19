@@ -76,8 +76,8 @@ class LoginForm extends Model
     {
         return [
             'login'      => Yii::t('user', 'Login'),
-            'password'   => Yii::t('user', 'Password'),
-            'rememberMe' => Yii::t('user', 'Remember me next time'),
+            'password'   => Yii::t('user', 'Hasło'),
+            'rememberMe' => Yii::t('user', 'Zapamiętaj mnie'),
         ];
     }
 
@@ -94,10 +94,10 @@ class LoginForm extends Model
                         $confirmationRequired = $this->module->enableConfirmation
                             && !$this->module->enableUnconfirmedLogin;
                         if ($confirmationRequired && !$this->user->getIsConfirmed()) {
-                            $this->addError($attribute, Yii::t('user', 'You need to confirm your email address'));
+                            $this->addError($attribute, Yii::t('user', 'Musisz potwierdzić swój adres e-mail'));
                         }
                         if ($this->user->getIsBlocked()) {
-                            $this->addError($attribute, Yii::t('user', 'Your account has been blocked'));
+                            $this->addError($attribute, Yii::t('user', 'Twoje konto zostało zablokowane'));
                         }
                     }
                 }

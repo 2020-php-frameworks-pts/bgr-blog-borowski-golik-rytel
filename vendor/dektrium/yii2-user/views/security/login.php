@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
  * @var dektrium\user\Module $module
  */
 
-$this->title = Yii::t('user', 'Sign in');
+$this->title = Yii::t('user', 'Zaloguj się');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -70,10 +70,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         ['inputOptions' => ['class' => 'form-control', 'tabindex' => '2']])
                         ->passwordInput()
                         ->label(
-                            Yii::t('user', 'Password')
+                            Yii::t('user', 'Hasło')
                             . ($module->enablePasswordRecovery ?
                                 ' (' . Html::a(
-                                    Yii::t('user', 'Forgot password?'),
+                                    Yii::t('user', 'Zapomniałeś hasła?'),
                                     ['/user/recovery/request'],
                                     ['tabindex' => '5']
                                 )
@@ -84,7 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'rememberMe')->checkbox(['tabindex' => '3']) ?>
 
                 <?= Html::submitButton(
-                    Yii::t('user', 'Sign in'),
+                    Yii::t('user', 'Zaloguj się'),
                     ['class' => 'btn btn-primary btn-block', 'tabindex' => '4']
                 ) ?>
 
@@ -93,12 +93,12 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <?php if ($module->enableConfirmation): ?>
             <p class="text-center">
-                <?= Html::a(Yii::t('user', 'Didn\'t receive confirmation message?'), ['/user/registration/resend']) ?>
+                <?= Html::a(Yii::t('user', 'Nie otrzymałeś maila aktywacyjnego?'), ['/user/registration/resend']) ?>
             </p>
         <?php endif ?>
         <?php if ($module->enableRegistration): ?>
             <p class="text-center">
-                <?= Html::a(Yii::t('user', 'Don\'t have an account? Sign up!'), ['/user/registration/register']) ?>
+                <?= Html::a(Yii::t('user', 'Nie masz konta? Zarejestruj się!'), ['/user/registration/register']) ?>
             </p>
         <?php endif ?>
         <?= Connect::widget([

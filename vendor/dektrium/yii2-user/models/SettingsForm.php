@@ -97,9 +97,9 @@ class SettingsForm extends Model
     {
         return [
             'email'            => Yii::t('user', 'Email'),
-            'username'         => Yii::t('user', 'Username'),
-            'new_password'     => Yii::t('user', 'New password'),
-            'current_password' => Yii::t('user', 'Current password'),
+            'username'         => Yii::t('user', 'Nazwa'),
+            'new_password'     => Yii::t('user', 'Nowe hasło'),
+            'current_password' => Yii::t('user', 'Aktualne hasło'),
         ];
     }
 

@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
  * @var dektrium\user\models\ResendForm $model
  */
 
-$this->title = Yii::t('user', 'Request new confirmation message');
+$this->title = Yii::t('user', 'Wyślij ponownie link aktywacyjny');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
 
-                <?= Html::submitButton(Yii::t('user', 'Continue'), ['class' => 'btn btn-primary btn-block']) ?><br>
+                <?= Html::submitButton(Yii::t('user', 'Kontynuuj'), ['class' => 'btn btn-primary btn-block']) ?><br>
 
                 <?php ActiveForm::end(); ?>
             </div>

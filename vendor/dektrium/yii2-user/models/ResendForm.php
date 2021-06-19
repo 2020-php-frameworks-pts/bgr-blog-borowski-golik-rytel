@@ -107,7 +107,7 @@ class ResendForm extends Model
             'info',
             \Yii::t(
                 'user',
-                'A message has been sent to your email address. It contains a confirmation link that you must click to complete registration.'
+                'Wiadomość została wysłana na Twojego maila. Zawiera link aktywujący konto.'
             )
         );
 

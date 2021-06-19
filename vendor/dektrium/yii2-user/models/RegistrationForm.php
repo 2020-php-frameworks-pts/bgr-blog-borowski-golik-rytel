@@ -55,7 +55,7 @@ class RegistrationForm extends Model
                 'username',
                 'unique',
                 'targetClass' => $user,
-                'message' => Yii::t('user', 'This username has already been taken')
+                'message' => Yii::t('user', 'Nazwa już jest wykorzystana')
             ],
             // email rules
             'emailTrim'     => ['email', 'trim'],
@@ -65,7 +65,7 @@ class RegistrationForm extends Model
                 'email',
                 'unique',
                 'targetClass' => $user,
-                'message' => Yii::t('user', 'This email address has already been taken')
+                'message' => Yii::t('user', 'Ten e-mail jest już wykorzystany')
             ],
             // password rules
             'passwordRequired' => ['password', 'required', 'skipOnEmpty' => $this->module->enableGeneratingPassword],
@@ -80,8 +80,8 @@ class RegistrationForm extends Model
     {
         return [
             'email'    => Yii::t('user', 'Email'),
-            'username' => Yii::t('user', 'Username'),
-            'password' => Yii::t('user', 'Password'),
+            'username' => Yii::t('user', 'Nazwa'),
+            'password' => Yii::t('user', 'Hasło'),
         ];
     }
 
@@ -117,7 +117,7 @@ class RegistrationForm extends Model
             'info',
             Yii::t(
                 'user',
-                'Your account has been created and a message with further instructions has been sent to your email'
+                'Twoje konto zostało utworzone.'
             )
         );
 
